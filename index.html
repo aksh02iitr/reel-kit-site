@@ -462,9 +462,9 @@ nav .wrap{gap:12px}
     <p class="fine">One payment · instant download · yours forever</p>
 
     <div class="stage">
-      <div class="phone ph-l"><span class="label tag">Pastel</span><video src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline preload="none"></video></div>
-      <div class="phone ph-c"><span class="label tag" style="background:var(--sun)">Made with the kit</span><video id="heroVid" src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline preload="none"></video><button class="sound" id="heroSound" type="button">🔊 Tap for sound</button></div>
-      <div class="phone ph-r"><span class="label tag">Night</span><video src="media/night.mp4" poster="media/night.webp" muted loop playsinline preload="none"></video></div>
+      <div class="phone ph-l"><span class="label tag">Pastel</span><video src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
+      <div class="phone ph-c"><span class="label tag" style="background:var(--sun)">Made with the kit</span><video id="heroVid" src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline autoplay preload="metadata"></video><button class="sound" id="heroSound" type="button">🔊 Tap for sound</button></div>
+      <div class="phone ph-r"><span class="label tag">Night</span><video src="media/night.mp4" poster="media/night.webp" muted loop playsinline autoplay preload="metadata"></video></div>
       <div class="bubble" id="bubble">Mere dost, every frame here is code.</div>
       <div class="host" id="host">
         <img class="on" src="media/point.webp" alt="Akshay's sticker character pointing at the reels">
@@ -500,11 +500,11 @@ nav .wrap{gap:12px}
     <h2>These came straight<br>out of <span class="hl">the folder.</span></h2>
     <p class="lede" style="margin-top:28px">Nobody opened a timeline. No stock clips, no AI video model. Every shape, caption and sound is placed by code, on the exact word it belongs to.</p>
     <div class="reels">
-      <div class="card reel pop"><div class="mini"><video src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline preload="none"></video></div>
+      <div class="card reel pop"><div class="mini"><video src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline autoplay preload="metadata"></video></div>
         <div><h3>My YC reel</h3><div class="facts"><span>48 sec, Hinglish</span><span>my own voice</span><span>my sticker as host</span></div></div></div>
-      <div class="card reel pop"><div class="mini"><video src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline preload="none"></video></div>
+      <div class="card reel pop"><div class="mini"><video src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
         <div><h3>Hook science</h3><div class="facts"><span>26 sec, pastel</span><span>free library voice</span><span>Blip as host</span></div></div></div>
-      <div class="card reel pop"><div class="mini"><video src="media/riso.mp4" poster="media/riso.webp" muted loop playsinline preload="none"></video></div>
+      <div class="card reel pop"><div class="mini"><video src="media/riso.mp4" poster="media/riso.webp" muted loop playsinline autoplay preload="metadata"></video></div>
         <div><h3>Same script, riso</h3><div class="facts"><span>26 sec, faceless</span><span>one word to switch</span><span>no host at all</span></div></div></div>
     </div>
   </div>
@@ -530,7 +530,7 @@ nav .wrap{gap:12px}
         </div>
       </div>
       <div class="side">
-        <div class="phone"><video src="media/night.mp4" poster="media/night.webp" muted loop playsinline preload="none"></video></div>
+        <div class="phone"><video src="media/night.mp4" poster="media/night.webp" muted loop playsinline autoplay preload="metadata"></video></div>
         <img class="peek" src="media/shocked.webp" alt="Akshay's character looking surprised">
       </div>
     </div>
@@ -562,7 +562,7 @@ nav .wrap{gap:12px}
           <div class="o"><b>Props</b><span class="chip">Stamps</span><span class="chip">Counters</span><span class="chip">Chats</span><span class="chip">Charts</span><span class="chip">+55 more</span></div>
         </div>
       </div>
-      <div class="phone" style="position:relative"><video id="styleVid" src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline preload="none"></video></div>
+      <div class="phone" style="position:relative"><video id="styleVid" src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
     </div>
   </div>
 </section>
@@ -595,7 +595,7 @@ nav .wrap{gap:12px}
 <section class="band pastel2" style="border-block:var(--bw) solid var(--ink)">
   <div class="wrap zones">
     <div class="zp" id="zp">
-      <div class="phone"><video src="media/clean.mp4" poster="media/clean.webp" muted loop playsinline preload="none"></video></div>
+      <div class="phone"><video src="media/clean.mp4" poster="media/clean.webp" muted loop playsinline autoplay preload="metadata"></video></div>
       <div class="ov"><i class="t"></i><i class="r"></i><i class="b"></i></div>
       <img class="peek2" src="media/crossed.webp" alt="Akshay's character with arms crossed">
     </div>
@@ -752,7 +752,7 @@ nav .wrap{gap:12px}
   // mobile-safe video: only play what is on screen (iOS and in-app browsers cap how many videos can play at once)
   const vids=[...document.querySelectorAll('video')];
   vids.forEach(v=>{ v.muted=true; v.defaultMuted=true; v.setAttribute('muted',''); v.playsInline=true; });
-  const tryPlay=(v)=>{ if(v.preload==='none') v.preload='auto'; const p=v.play(); if(p&&p.catch) p.catch(()=>{}); };
+  const tryPlay=(v)=>{ v.muted=true; const p=v.play(); if(p&&p.catch) p.catch(()=>{}); };
   if('IntersectionObserver' in window){
     const vo=new IntersectionObserver(es=>es.forEach(e=>{ const v=e.target; if(e.isIntersecting) tryPlay(v); else if(!(v===hv && !hv.muted)) v.pause(); }),{threshold:.25});
     vids.forEach(v=>vo.observe(v));
