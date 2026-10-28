@@ -419,6 +419,19 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
 }
 @media(max-width:360px){.logo i{display:none}}
 
+
+/* mobile header fix */
+.logo,.btn{white-space:nowrap}
+nav .wrap{gap:12px}
+@media(max-width:520px){
+  nav .wrap{height:60px}
+  .logo{font-size:17px;gap:8px}
+  .logo i{font-size:10px;padding:2px 5px}
+  nav .btn.sm{font-size:13px;padding:7px 8px 7px 12px;gap:8px;box-shadow:3px 3px 0 var(--ink)}
+  nav .btn.sm .p{font-size:12px;padding:2px 6px}
+}
+@media(max-width:370px){.logo i{display:none}}
+
 /* entrance: content is visible at rest; .pop only adds a small bounce when it scrolls in */
 .pop.in{animation:popin .55s cubic-bezier(.2,1.4,.4,1)}
 @keyframes popin{0%{transform:translateY(16px) scale(.97)}100%{transform:none}}
