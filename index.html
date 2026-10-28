@@ -329,6 +329,96 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
 @keyframes spin{to{transform:rotate(360deg)}}
 .badge:hover{transform:scale(1.05)}
 
+
+/* phone fixes */
+.hero{overflow-x:clip}
+.badge{transition:opacity .25s,transform .25s}
+.badge.hide{opacity:0;pointer-events:none;transform:scale(.8)}
+.it .q.sm{font-size:16px}
+@media(max-width:600px){
+  body{font-size:16px}
+  .band{padding-block:64px}
+  h1{font-size:clamp(38px,11vw,46px)}
+  h2{font-size:clamp(28px,8.4vw,34px)}
+  .lede{font-size:16px}
+  .hero{padding-block:36px 0}
+  .hero .eyebrow{font-size:19px;margin-bottom:12px}
+  .hero .lede{margin-top:20px}
+  .prompt{margin-top:28px;padding:10px 10px 10px 14px}
+  .prompt .typed{font-size:13px}
+  .buyrow{margin-top:28px;gap:16px}
+  .btn{font-size:17px;padding:12px 14px 12px 18px}
+  .pricetag b{font-size:22px}
+  .stage{height:470px;margin-top:44px}
+  .ph-c{width:220px;margin-left:-140px}
+  .host{width:138px;right:-6px}
+  .bubble{right:112px;bottom:186px;font-size:17px;max-width:150px;padding:8px 11px}
+  .ticker span{font-size:15px;padding:10px 14px}
+  .badge{width:72px;height:72px;right:max(12px,calc(env(safe-area-inset-right,0px) + 12px));bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}
+  .badge b{font-size:16px}
+  .think img{width:190px;margin-bottom:-64px}
+  .think > div:first-child{padding-bottom:40px!important}
+  .think .hmm{font-size:24px;right:150px;bottom:170px}
+  .objs{margin-top:28px;gap:10px}
+  .objs a{font-size:12px;padding:7px 12px}
+  .struck{margin-bottom:18px}
+  .struck q{font-size:16px}
+  .struck .n{width:34px;height:34px;font-size:19px}
+  [style*="margin-top:28px"]{margin-top:18px!important}
+  .reels{gap:20px;margin-top:36px}
+  .reel{grid-template-columns:96px 1fr;gap:16px;padding:14px}
+  .how{gap:40px;margin-top:36px}
+  .term{font-size:13px}
+  .term .body{padding:18px 16px 20px}
+  .step{flex-wrap:wrap;padding:7px 0;row-gap:2px}
+  .step .meta{width:100%;margin-left:28px;text-align:left;font-size:11.5px}
+  .how .phone{width:210px}
+  .how .side img.peek{width:118px;right:-6px;bottom:-26px}
+  .three{gap:18px;margin-top:48px}
+  .three .s{padding:22px}
+  .styles{gap:36px;margin-top:36px}
+  .tabs{grid-template-columns:repeat(4,1fr);gap:8px}
+  .tab{border-width:2px;border-radius:10px;box-shadow:3px 3px 0 var(--ink)}
+  .tab span{font-size:10px;padding:5px 0}
+  .tab[aria-selected="true"]{transform:translateY(-4px) rotate(-2deg);box-shadow:4px 4px 0 var(--ink)}
+  .sdesc{margin-top:22px;min-height:0}
+  .opts{margin-top:24px;padding-top:22px;gap:14px}
+  .opts .o{gap:6px}
+  .opts .o b{width:100%;font-size:14px}
+  .chip{font-size:11px;padding:5px 10px}
+  .styles .phone{width:210px}
+  .ideas{gap:48px}
+  .cmds{gap:14px;margin-top:28px}
+  .cmd2{padding:16px;gap:14px;flex-direction:column}
+  .score{padding:22px}
+  .score .hd{flex-direction:column;align-items:flex-start;gap:2px}
+  .score .hook{font-size:20px;margin:16px 0 6px}
+  .rw{grid-template-columns:1fr 90px 22px;font-size:13px}
+  .ideas .who img{width:118px;right:-6px;bottom:-70px}
+  .zones{gap:40px}
+  .zp,.zp .phone{width:220px}
+  .zones .peek2{width:110px;left:-22px;bottom:-20px}
+  .toggle{margin-top:24px}
+  .checks{margin-top:26px;gap:14px}
+  .checks li{font-size:15px}
+  .voices{gap:18px;margin-top:36px}
+  .voice{padding:22px}
+  .inside{margin-top:32px}
+  .it{grid-template-columns:52px 1fr;gap:16px;padding:18px 0}
+  .it .q{font-size:20px;height:42px}
+  .it .q.sm{font-size:14px}
+  .pgrid{gap:48px}
+  .ticket{max-width:330px;transform:rotate(-1.5deg)}
+  .ticket .pr .big b{font-size:46px}
+  .reqs{margin-top:26px;gap:8px}
+  .faq{margin-top:32px}
+  summary{font-size:16px;padding:18px 0}
+  details p{font-size:15px}
+  .final img{width:180px;margin-bottom:-64px}
+  .final .wrap > div:first-child{padding-bottom:40px!important}
+}
+@media(max-width:360px){.logo i{display:none}}
+
 /* entrance: content is visible at rest; .pop only adds a small bounce when it scrolls in */
 .pop.in{animation:popin .55s cubic-bezier(.2,1.4,.4,1)}
 @keyframes popin{0%{transform:translateY(16px) scale(.97)}100%{transform:none}}
@@ -527,9 +617,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
       <div class="it"><span class="q">4×3</span><div><h3>Styles and layouts</h3><p>Pastel, night, riso and clean. Chapter, caption and faceless stack. One word switches them.</p></div></div>
       <div class="it"><span class="q">3</span><div><h3>Skills</h3><p>/reel makes the video, /viral finds ideas, /hooks writes and scores the opener.</p></div></div>
       <div class="it"><span class="q">8</span><div><h3>Playbooks</h3><p>Writing, hooks, virality, staging, styles, voice, host and sound, backed by retention data.</p></div></div>
-      <div class="it"><span class="q">🎙</span><div><h3>Voice studio</h3><p>Library voices, your recording or your clone. Pause tightening, speed, one-line fixes, word-perfect captions, lip sync.</p></div></div>
+      <div class="it"><span class="q sm">VO</span><div><h3>Voice studio</h3><p>Library voices, your recording or your clone. Pause tightening, speed, one-line fixes, word-perfect captions, lip sync.</p></div></div>
       <div class="it"><span class="q">11</span><div><h3>Premium sound effects</h3><p>Generated once on ElevenLabs and kept under your voice. No music, so you add a trending track on Instagram.</p></div></div>
-      <div class="it"><span class="q">☺</span><div><h3>Your own host</h3><p>Prompts to turn one photo into a sticker set of you, plus an auto-cutter. Or use Blip, or go faceless.</p></div></div>
+      <div class="it"><span class="q sm">YOU</span><div><h3>Your own host</h3><p>Prompts to turn one photo into a sticker set of you, plus an auto-cutter. Or use Blip, or go faceless.</p></div></div>
       <div class="it"><span class="q">✓</span><div><h3>Guided setup</h3><p>A start-here guide and a checkup that finds what's missing on your laptop and fixes it with you.</p></div></div>
     </div>
   </div>
@@ -675,6 +765,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
   document.querySelectorAll('.wave').forEach((w,n)=>{ w.innerHTML=Array.from({length:28},(_,i)=>'<i style="animation-delay:'+(-((i*37+n*13)%11)/10)+'s"></i>').join(''); });
 
   // buy (payments come next)
+
+
+  // hide the floating badge while a buy button is already on screen
+  const badge=document.querySelector('.badge');
+  if('IntersectionObserver' in window && badge){
+    const seen=new Set();
+    const bo=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?seen.add(e.target):seen.delete(e.target));badge.classList.toggle('hide',seen.size>0)},{threshold:.2});
+    document.querySelectorAll('.hero .buyrow,#price,.final').forEach(n=>bo.observe(n));
+  }
 
   // scroll-in bounce (content stays visible at rest)
   if('IntersectionObserver' in window && !reduce){
