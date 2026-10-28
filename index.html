@@ -196,7 +196,7 @@ nav .links a:hover{text-decoration:underline;text-decoration-thickness:2px;text-
 
 /* styles switcher */
 .styles{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:center;margin-top:64px}
-.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .tab{appearance:none;border:var(--bw) solid var(--ink);border-radius:14px;background:var(--white);padding:0;overflow:hidden;box-shadow:var(--shs);font:inherit;color:var(--ink);transition:transform .15s}
 .tab img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-bottom:2px solid var(--ink)}
 .tab span{display:block;font-family:var(--mono);font-weight:700;font-size:12px;text-transform:uppercase;padding:7px 0}
@@ -209,7 +209,7 @@ nav .links a:hover{text-decoration:underline;text-decoration-thickness:2px;text-
 .opts .o{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .opts .o b{font-family:var(--disp);text-transform:uppercase;font-size:15px;width:84px}
 .styles .phone{position:relative;width:280px;margin:0 auto;transform:rotate(-2deg)}
-@media(max-width:860px){.styles{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.styles{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(3,1fr)}}
 
 /* ideas */
 .pastel2{background:var(--paper2)}
@@ -377,7 +377,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
   .three{gap:18px;margin-top:48px}
   .three .s{padding:22px}
   .styles{gap:36px;margin-top:36px}
-  .tabs{grid-template-columns:repeat(4,1fr);gap:8px}
+  .tabs{grid-template-columns:repeat(5,1fr);gap:6px}
   .tab{border-width:2px;border-radius:10px;box-shadow:3px 3px 0 var(--ink)}
   .tab span{font-size:10px;padding:5px 0}
   .tab[aria-selected="true"]{transform:translateY(-4px) rotate(-2deg);box-shadow:4px 4px 0 var(--ink)}
@@ -510,7 +510,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
           <div class="step done"><span class="dot"></span>Write the script<span class="meta">stake in 4 words</span></div>
           <div class="step done"><span class="dot"></span>Record the voice<span class="meta">0:31 · pauses tightened</span></div>
           <div class="step done"><span class="dot"></span>Plan every beat<span class="meta">9 beats · 9 props</span></div>
-          <div class="step done"><span class="dot"></span>Build the scenes<span class="meta">from a 42-prop bank</span></div>
+          <div class="step done"><span class="dot"></span>Build the scenes<span class="meta">from a 59-prop bank</span></div>
           <div class="step done"><span class="dot"></span>Check the safe zones<span class="meta">nothing under IG buttons</span></div>
           <div class="step done pass"><span class="dot"></span>Run the gates<span class="meta">hook · pace · loudness PASS</span></div>
           <div class="out on" id="tout">✓ build/final.mp4 · 1080×1920 · 30fps · caption.txt</div>
@@ -532,7 +532,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
 <section class="band pastel2" id="styles" style="border-block:var(--bw) solid var(--ink)">
   <div class="wrap">
     <div class="struck"><span class="n">03</span><q>They'll all look the same</q></div>
-    <h2>Four styles. Three layouts.<br><span class="hl lilac">Your host.</span></h2>
+    <h2>Five styles. Four layouts.<br><span class="hl lilac">Your host.</span></h2>
     <div class="styles">
       <div>
         <div class="tabs" role="tablist" aria-label="Styles">
@@ -540,12 +540,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
           <button class="tab" role="tab" id="t-night" aria-selected="false" data-s="night"><img src="media/night.webp" alt=""><span>Night</span></button>
           <button class="tab" role="tab" id="t-riso" aria-selected="false" data-s="riso"><img src="media/riso.webp" alt=""><span>Riso</span></button>
           <button class="tab" role="tab" id="t-clean" aria-selected="false" data-s="clean"><img src="media/clean.webp" alt=""><span>Clean</span></button>
+          <button class="tab" role="tab" id="t-paper" aria-selected="false" data-s="paper"><img src="media/paper.webp" alt=""><span>Paper <b style="color:var(--pink)">new</b></span></button>
         </div>
         <div class="sdesc" id="sdesc"></div>
         <div class="opts">
-          <div class="o"><b>Layouts</b><span class="chip">Chapter</span><span class="chip">Caption</span><span class="chip">Stack</span></div>
+          <div class="o"><b>Layouts</b><span class="chip">Chapter</span><span class="chip">Caption</span><span class="chip">Stack</span><span class="chip">Editorial</span></div>
           <div class="o"><b>Host</b><span class="chip">Blip mascot</span><span class="chip">You, as a sticker</span><span class="chip">None</span></div>
-          <div class="o"><b>Props</b><span class="chip">Stamps</span><span class="chip">Counters</span><span class="chip">Chats</span><span class="chip">Charts</span><span class="chip">+38 more</span></div>
+          <div class="o"><b>Props</b><span class="chip">Stamps</span><span class="chip">Counters</span><span class="chip">Chats</span><span class="chip">Charts</span><span class="chip">+55 more</span></div>
         </div>
       </div>
       <div class="phone" style="position:relative"><video id="styleVid" src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
@@ -613,9 +614,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
   <div class="wrap">
     <h2>What's in <span class="hl pink">the folder</span></h2>
     <div class="inside">
-      <div class="it"><span class="q">42</span><div><h3>Scene bank</h3><p>Animated props with their own sounds: stamps, counters, terminals, chats, charts, calendars, pick-a-side CTAs.</p></div></div>
-      <div class="it"><span class="q">4×3</span><div><h3>Styles and layouts</h3><p>Pastel, night, riso and clean. Chapter, caption and faceless stack. One word switches them.</p></div></div>
-      <div class="it"><span class="q">3</span><div><h3>Skills</h3><p>/reel makes the video, /viral finds ideas, /hooks writes and scores the opener.</p></div></div>
+      <div class="it"><span class="q">59</span><div><h3>Scene bank</h3><p>Animated props with their own sounds: stamps, counters, terminals, chats, charts, calendars, pick-a-side CTAs, plus 17 new editorial props.</p></div></div>
+      <div class="it"><span class="q">5×4</span><div><h3>Styles and layouts</h3><p>Pastel, night, riso, clean and the new paper style. Chapter, caption, faceless stack and editorial. One word switches them.</p></div></div>
+      <div class="it"><span class="q">4</span><div><h3>Skills</h3><p>/reel makes the video, /editorial makes the paper style, /viral finds ideas, /hooks writes and scores the opener.</p></div></div>
       <div class="it"><span class="q">8</span><div><h3>Playbooks</h3><p>Writing, hooks, virality, staging, styles, voice, host and sound, backed by retention data.</p></div></div>
       <div class="it"><span class="q sm">VO</span><div><h3>Voice studio</h3><p>Library voices, your recording or your clone. Pause tightening, speed, one-line fixes, word-perfect captions, lip sync.</p></div></div>
       <div class="it"><span class="q">11</span><div><h3>Premium sound effects</h3><p>Generated once on ElevenLabs and kept under your voice. No music, so you add a trending track on Instagram.</p></div></div>
@@ -631,7 +632,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
       <span class="notch l" style="--y:96px"></span><span class="notch r" style="--y:96px"></span>
       <div class="top"><h3>Reel Kit</h3><p class="fine">1 folder · admit one creator</p></div>
       <ul>
-        <li>42-prop scene bank</li><li>4 styles, 3 layouts</li><li>/reel, /viral, /hooks</li><li>8 playbooks</li>
+        <li>59-prop scene bank</li><li>5 styles, 4 layouts</li><li>/reel, /editorial, /viral, /hooks</li><li>8 playbooks</li>
         <li>voice studio + lip sync</li><li>premium sound set</li><li>your own host kit</li><li>client work allowed</li>
       </ul>
       <div class="pr">
@@ -745,7 +746,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
   const S={pastel:{d:'Soft pastels, thick ink outlines and hard shadows. Friendly and loud. Great for tips, founders and how-tos.',c:['#EDE7FF','#FFD966','#8EE0B9','#FFA88A','#1D1B33']},
            night:{d:'Midnight navy with neon edges and glow. Built for AI, tech and news reels.',c:['#0C0B22','#7CF7D4','#FF6FD8','#FFC857','#8B87FF']},
            riso:{d:'Risograph print: cool paper, fluoro pink and blue, off-register shadows and grain. Feels made by hand.',c:['#E9EDF5','#FF5FA2','#7FA2FF','#FFD23F','#1B2A6B']},
-           clean:{d:'White studio, soft depth, one cobalt accent and serif italics. For business, finance and B2B.',c:['#F4F5F8','#2F5BFF','#FFE08A','#C9F2DF','#14161C']}};
+           clean:{d:'White studio, soft depth, one cobalt accent and serif italics. For business, finance and B2B.',c:['#F4F5F8','#2F5BFF','#FFE08A','#C9F2DF','#14161C']},
+           paper:{d:'New. Graph paper, black ink, one red accent. Real UI props that land with springs, smear trails, flips and hand-drawn circles. For "how I built it" and explainer reels.',c:['#F4F1EB','#17171A','#E5402B','#FFD9D1','#1B1B20']}};
   const sv=document.getElementById('styleVid'), sd=document.getElementById('sdesc');
   function setStyle(k){ document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x.dataset.s===k));
     sd.innerHTML='<p>'+S[k].d+'</p><div class="sw">'+S[k].c.map(c=>'<i style="background:'+c+'"></i>').join('')+'</div>';
