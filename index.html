@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Type one line in Claude Code. Get a finished Instagram reel, caption and DMs. 6 styles, research built in. $6 launch price.">
+<meta name="description" content="Type one line in Claude Code. Get a finished Instagram reel, caption and DMs. 7 styles including 3D skits, research built in. $10 launch price.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -465,6 +465,46 @@ nav .wrap{gap:12px}
 }
 @media(max-width:370px){.logo i{display:none}}
 
+
+/* 3D skit: the one night scene on the page. Low-poly desk at night, Claude breathing on the edge */
+.night3d{background:#0E1230;color:var(--white);border-block:var(--bw) solid var(--ink);overflow:hidden;
+  background-image:radial-gradient(ellipse 70% 55% at 85% 0%,rgba(255,170,90,.18),transparent 70%),radial-gradient(rgba(255,255,255,.06) 1px,transparent 1.2px);background-size:auto,30px 30px}
+.night3d .lede{color:#D9D6F0}
+.night3d .new{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;background:var(--peach);color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:3px 9px;transform:rotate(-3deg);margin-bottom:18px;box-shadow:3px 3px 0 #000}
+.lp{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px;position:relative;z-index:2}
+.lp .card{color:var(--ink);padding:14px;display:flex;flex-direction:column;gap:12px;position:relative}
+.lp .pic{aspect-ratio:3/4;border:2px solid var(--ink);border-radius:12px;overflow:hidden;background:#F1EDE8;display:grid;place-items:center}
+.lp .pic img,.lp .pic video{width:100%;height:100%;object-fit:cover;display:block}
+.lp .pic.sheet img{object-fit:contain;background:#B9AEA9}
+.lp .pic.ph{background:var(--paper)}
+.lp .pic.ph svg{width:46%;height:auto}
+.lp .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.lp h3{font-size:19px}
+.lp p{font-size:14px;color:var(--ink2);line-height:1.5}
+.lp .card:not(:last-child)::after{content:"→";position:absolute;right:-24px;top:38%;font-family:var(--disp);font-size:22px;color:var(--sun);z-index:3}
+.lp .card:nth-child(odd){transform:rotate(-1.2deg)}.lp .card:nth-child(even){transform:rotate(1.2deg)}
+.lp .card:last-child{background:var(--sun)}
+.skitcmd{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:44px;position:relative;z-index:2}
+.skitcmd code{font-family:var(--mono);font-size:15px;font-weight:700;background:#1A1F45;color:var(--sun);border:2px solid #3B4280;border-radius:10px;padding:10px 14px}
+.skitcmd span{font-family:var(--mono);font-size:13px;color:#B9B6D8}
+.buddy{position:absolute;right:max(10px,calc(50% - 600px));top:70px;width:210px;z-index:1;pointer-events:none}
+.buddy img{width:100%;transform-origin:50% 100%;animation:breathe 3.4s ease-in-out infinite;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.buddy .glow{position:absolute;left:10%;top:-6%;width:44%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,236,190,.9),rgba(255,200,120,.35) 35%,transparent 70%);mix-blend-mode:screen;animation:glow 2.2s ease-in-out infinite}
+.buddy .say{position:absolute;right:88%;top:12%;width:max-content;max-width:210px;background:var(--white);color:var(--ink);border:var(--bw) solid var(--ink);border-radius:18px 18px 4px 18px;padding:8px 13px;font-family:var(--hand);font-size:22px;line-height:1.1;transform:rotate(-4deg);box-shadow:4px 4px 0 #000}
+@keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(.99,1.025)}}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:1}}
+.peek3d{position:absolute;left:calc(50% - 250px);top:390px;width:150px;z-index:6;pointer-events:none}
+.peek3d img{width:100%;transform-origin:50% 100%;animation:breathe 3.4s ease-in-out infinite;filter:drop-shadow(5px 6px 0 rgba(29,27,51,.25))}
+@media(max-width:1100px){.buddy{width:160px;top:40px}}
+@media(max-width:900px){.lp{grid-template-columns:repeat(2,1fr);gap:22px}.lp .card::after{display:none}.buddy{position:relative;right:auto;top:auto;width:150px;margin:-10px 0 0 auto}.buddy .say{font-size:18px;right:92%}}
+@media(max-width:520px){.lp{gap:14px}.lp .card{padding:10px}.lp h3{font-size:16px}.lp p{font-size:13px}.skitcmd code{font-size:13px}.peek3d{width:100px;left:calc(50% - 190px);top:330px}}
+.reels.four{grid-template-columns:repeat(2,1fr);max-width:900px}
+@media(max-width:900px){.reels.four{grid-template-columns:1fr;max-width:460px}}
+.reel .new2{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;background:var(--peach);border:2px solid var(--ink);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:3px}
+.tabs.seven{grid-template-columns:repeat(4,1fr)}
+.tab .nw{position:absolute;top:6px;right:6px;font-family:var(--mono);font-size:9px;font-weight:700;background:var(--peach);border:2px solid var(--ink);border-radius:5px;padding:0 4px}
+.tab{position:relative}
+
 /* entrance: content is visible at rest; .pop only adds a small bounce when it scrolls in */
 .pop.in{animation:popin .55s cubic-bezier(.2,1.4,.4,1)}
 @keyframes popin{0%{transform:translateY(16px) scale(.97)}100%{transform:none}}
@@ -476,8 +516,8 @@ nav .wrap{gap:12px}
 <nav>
   <div class="wrap">
     <a class="logo" href="#top">Reel Kit <i>@akshay.0to1</i></a>
-    <div class="links"><a href="#creators">Why</a><a href="#proof">Reels</a><a href="#how">How it works</a><a href="#styles">Styles</a><a href="#faq">FAQ</a></div>
-    <a class="btn sm" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get it <span class="p">$6</span></a>
+    <div class="links"><a href="#creators">Why</a><a href="#proof">Reels</a><a href="#how">How it works</a><a href="#skit">3D skits</a><a href="#styles">Styles</a><a href="#faq">FAQ</a></div>
+    <a class="btn sm" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get it <span class="p">$10</span></a>
   </div>
 </nav>
 
@@ -487,17 +527,18 @@ nav .wrap{gap:12px}
     <span class="eyebrow">made in code, not by an AI video model</span>
     <h1>Type one line.<br><span class="hl">Get a reel.</span></h1>
     <p class="lede">Type one line in Claude Code. Get a finished reel, caption and DMs.</p>
-    <div class="prompt" aria-hidden="true"><span class="gt">&gt;</span><span class="typed" id="typed">/reel why most founders price too low</span><kbd>ENTER</kbd></div>
+    <div class="prompt" aria-hidden="true"><span class="gt">&gt;</span><span class="typed" id="typed">/skit me vs my AI, night desk</span><kbd>ENTER</kbd></div>
     <div class="buyrow">
-      <a class="btn" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$6</span></a>
-      <div class="pricetag"><div><small>Launch price</small><b>$6</b> <s>$24</s></div></div>
+      <a class="btn" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$10</span></a>
+      <div class="pricetag"><div><small>Launch price</small><b>$10</b> <s>$24</s></div></div>
     </div>
     <p class="fine">One payment · instant download · yours forever</p>
 
     <div class="stage">
       <div class="phone ph-l"><span class="label tag">Pastel</span><video src="media/pastel.mp4" poster="media/pastel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
-      <div class="phone ph-c"><span class="label tag" style="background:var(--sun)">Made with the kit</span><video id="heroVid" src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline autoplay preload="metadata"></video><button class="sound" id="heroSound" type="button">🔊 Tap for sound</button></div>
+      <div class="phone ph-c"><span class="label tag" style="background:var(--peach)">New: 3D skit</span><video id="heroVid" src="media/skit.mp4" poster="media/skit.webp" muted loop playsinline autoplay preload="metadata"></video><button class="sound" id="heroSound" type="button">🔊 Tap for sound</button></div>
       <div class="phone ph-r"><span class="label tag">Night</span><video src="media/night.mp4" poster="media/night.webp" muted loop playsinline autoplay preload="metadata"></video></div>
+      <div class="peek3d" aria-hidden="true"><img src="media/claude-3d.webp" alt=""></div>
       <div class="bubble" id="bubble">Mere dost, every frame here is code.</div>
       <div class="host" id="host">
         <img class="on" src="media/point.webp" alt="Akshay's sticker character pointing at the reels">
@@ -506,7 +547,7 @@ nav .wrap{gap:12px}
       </div>
     </div>
   </div>
-  <div class="ticker" aria-label="Launch price $6, later $24">
+  <div class="ticker" aria-label="Launch price $10, later $24. New: 3D skits">
     <div class="row" id="tick"></div>
   </div>
 </section>
@@ -529,7 +570,9 @@ nav .wrap{gap:12px}
   <div class="wrap">
     <h2>Made with <span class="hl">the kit.</span></h2>
     <p class="lede" style="margin-top:20px">No editor. No AI video model. All code.</p>
-    <div class="reels">
+    <div class="reels four">
+      <div class="card reel pop"><div class="mini"><video src="media/skit.mp4" poster="media/skit.webp" muted loop playsinline autoplay preload="metadata"></video></div>
+        <div><h3>I turned myself 3D <span class="new2">NEW</span></h3><div class="facts"><span>54 sec, two voices</span><span>3D me + Claude</span><span>talks, blinks, breathes</span></div></div></div>
       <div class="card reel pop"><div class="mini"><video src="media/yc.mp4" poster="media/yc.webp" muted loop playsinline autoplay preload="metadata"></video></div>
         <div><h3>My YC reel</h3><div class="facts"><span>48 sec, Hinglish</span><span>my own voice</span><span>my sticker as host</span></div></div></div>
       <div class="card reel pop"><div class="mini"><video src="media/pixel.mp4" poster="media/pixel.webp" muted loop playsinline autoplay preload="metadata"></video></div>
@@ -558,18 +601,35 @@ nav .wrap{gap:12px}
   </div>
 </section>
 
+<section class="band night3d" id="skit">
+  <div class="buddy" aria-hidden="true"><span class="glow"></span><img src="media/claude-3d.webp" alt=""><span class="say">Your face. Fixed.</span></div>
+  <div class="wrap">
+    <span class="new">NEW IN V3</span>
+    <h2>Meet your <span class="hl">3D self.</span></h2>
+    <p class="lede" style="margin-top:20px">You and a sidekick as 3D characters, talking in one scene. One photo, about an hour, once. Every skit after that takes one line.</p>
+    <div class="lp">
+      <div class="card pop"><div class="pic ph"><svg viewBox="0 0 110 90" aria-hidden="true"><rect x="5" y="18" width="100" height="66" rx="14" fill="#FFFFFF" stroke="#1D1B33" stroke-width="6"/><rect x="36" y="6" width="38" height="16" rx="5" fill="#1D1B33"/><circle cx="55" cy="51" r="19" fill="#FFD966" stroke="#1D1B33" stroke-width="6"/></svg></div><span class="k">Step 1 · you</span><h3>One photo</h3><p>A clear photo of you. Claude gives you the ChatGPT prompts.</p></div>
+      <div class="card pop"><div class="pic sheet"><img src="media/3d-sheet.webp" alt="A 3D character sheet of Akshay: front, three-quarter and side" loading="lazy"></div><span class="k">Step 2 · ChatGPT</span><h3>Your 3D sheet</h3><p>Fix it with words. Claude checks every image.</p></div>
+      <div class="card pop"><div class="pic"><img src="media/3d-scene.webp" alt="3D Akshay at a desk at night with the Claude mascot" loading="lazy"></div><span class="k">Step 3 · ChatGPT</span><h3>Your scene</h3><p>Same you in every shot, one set, 8 to 10 angles.</p></div>
+      <div class="card pop"><div class="pic"><video src="media/skit.mp4" poster="media/skit.webp" muted loop playsinline autoplay preload="metadata"></video></div><span class="k">Step 4 · Claude Code</span><h3>A talking skit</h3><p>Mouths follow your voices. Blinks, breathing, captions. All code.</p></div>
+    </div>
+    <div class="skitcmd"><code>&gt; /skit me vs my AI, night desk</code><span>two voices from ElevenLabs · a cut on every line · no animator</span></div>
+  </div>
+</section>
+
 <section class="band pastel2" id="styles" style="border-block:var(--bw) solid var(--ink)">
   <div class="wrap">
-    <h2>Six <span class="hl lilac">styles.</span></h2>
+    <h2>Seven <span class="hl lilac">styles.</span></h2>
     <div class="styles">
       <div>
-        <div class="tabs" role="tablist" aria-label="Styles">
+        <div class="tabs seven" role="tablist" aria-label="Styles">
           <button class="tab" role="tab" id="t-pastel" aria-selected="true" data-s="pastel"><img src="media/pastel.webp" alt=""><span>Pastel</span></button>
           <button class="tab" role="tab" id="t-night" aria-selected="false" data-s="night"><img src="media/night.webp" alt=""><span>Night</span></button>
           <button class="tab" role="tab" id="t-riso" aria-selected="false" data-s="riso"><img src="media/riso.webp" alt=""><span>Riso</span></button>
           <button class="tab" role="tab" id="t-clean" aria-selected="false" data-s="clean"><img src="media/clean.webp" alt=""><span>Clean</span></button>
           <button class="tab" role="tab" id="t-paper" aria-selected="false" data-s="paper"><img src="media/paper.webp" alt=""><span>Paper</span></button>
           <button class="tab" role="tab" id="t-pixel" aria-selected="false" data-s="pixel"><img src="media/pixel.webp" alt=""><span>Pixel</span></button>
+          <button class="tab" role="tab" id="t-skit" aria-selected="false" data-s="skit"><img src="media/skit-tile.webp" alt=""><span>3D skit</span><i class="nw">NEW</i></button>
         </div>
         <div class="sdesc" id="sdesc"></div>
       </div>
@@ -585,12 +645,14 @@ nav .wrap{gap:12px}
   <div class="wrap">
     <h2>What you <span class="hl pink">get</span></h2>
     <div class="inside">
-      <div class="it"><span class="q">6</span><div><h3>Styles</h3><p>Pastel, night, riso, clean, paper, pixel.</p></div></div>
+      <div class="it"><span class="q">7</span><div><h3>Styles</h3><p>Pastel, night, riso, clean, paper, pixel, 3D skit.</p></div></div>
       <div class="it"><span class="q">66</span><div><h3>Animations</h3><p>Charts, chats, stamps, counters and more.</p></div></div>
-      <div class="it"><span class="q">17</span><div><h3>Skills</h3><p>One for each step, from research to final.</p></div></div>
-      <div class="it"><span class="q sm">YOU</span><div><h3>Your host</h3><p>You as a sticker, in pixels, or a mascot.</p></div></div>
+      <div class="it"><span class="q">18</span><div><h3>Skills</h3><p>One for each step, from research to final.</p></div></div>
+      <div class="it"><span class="q sm">YOU</span><div><h3>Your host</h3><p>You as a sticker, in pixels, in 3D, or a mascot.</p></div></div>
       <div class="it"><span class="q sm">VO</span><div><h3>Your voice</h3><p>Your recording, your clone, or any voice.</p></div></div>
       <div class="it"><span class="q">11</span><div><h3>Sound effects</h3><p>Kept under your voice. You add the music.</p></div></div>
+      <div class="it"><span class="q sm">3D</span><div><h3>Casts</h3><p>You and a sidekick in 3D, any set. Made once, reused in every skit.</p></div></div>
+      <div class="it"><span class="q sm">2VO</span><div><h3>Two-voice dialogue</h3><p>Each character's lines stitched into one conversation, every word timed.</p></div></div>
     </div>
   </div>
 </section>
@@ -601,12 +663,12 @@ nav .wrap{gap:12px}
       <span class="notch l" style="--y:96px"></span><span class="notch r" style="--y:96px"></span>
       <div class="top"><h3>Reel Kit</h3><p class="fine">1 folder · admit one creator</p></div>
       <ul>
-        <li>6 styles</li><li>66 animations</li><li>17 skills</li>
+        <li>7 styles</li><li>3D skits</li><li>66 animations</li><li>18 skills</li>
         <li>your own host</li><li>sound effects</li><li>client work allowed</li>
       </ul>
       <div class="pr">
-        <div class="big"><b>$6</b><s>$24</s></div>
-        <div class="save"><span>you save today</span><span>$18</span></div>
+        <div class="big"><b>$10</b><s>$24</s></div>
+        <div class="save"><span>you save today</span><span>$14</span></div>
         <p class="fine" style="margin-top:8px">launch price · pay once · no subscription</p>
       </div>
     </div>
@@ -614,7 +676,7 @@ nav .wrap{gap:12px}
       <h2>Grab chai.<br><span class="hl">Come back to a reel.</span></h2>
       <p class="lede" style="margin-top:20px">Pay once. No credits. It all runs on your laptop.</p>
       <div class="buyrow" style="justify-content:flex-start">
-        <a class="btn" id="buy" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$6</span></a>
+        <a class="btn" id="buy" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$10</span></a>
       </div>
       <p class="pnote" id="pnote" aria-live="polite">Instant download after payment · launch price, goes to $24</p>
       <div class="reqs">
@@ -635,11 +697,13 @@ nav .wrap{gap:12px}
         <details><summary>Which Claude plan?</summary><p>Any plan with Claude Code: Pro, Max, Team or Enterprise.</p></details>
         <details><summary>How long does a reel take?</summary><p>About 30 to 60 minutes. Claude does most of it on its own.</p></details>
         <details><summary>What do I get after I pay?</summary><p>A download link to the folder and a start-here guide.</p></details>
+        <details><summary>Do I need to know 3D?</summary><p>No. Claude gives you the ChatGPT prompts one by one, checks every image, then animates it all in code.</p></details>
       </div>
       <div>
         <details><summary>Do I have to show my face?</summary><p>No. Use the mascot, go faceless, or use a sticker or pixel version of you.</p></details>
         <details><summary>Can I make reels for clients?</summary><p>Yes. Just don't resell or share the kit itself.</p></details>
-        <details><summary>Is $6 the real price?</summary><p>It's the launch price. It goes up to $24 later.</p></details>
+        <details><summary>Is $10 the real price?</summary><p>It's the launch price. It goes up to $24 later.</p></details>
+        <details><summary>How do the 3D characters talk?</summary><p>You make each character's lines in ElevenLabs. The kit stitches them into one conversation and moves their mouths with the voice.</p></details>
         <details><summary>What if I get stuck?</summary><p>DM me on Instagram <a href="https://www.instagram.com/akshay.0to1/" target="_blank" rel="noopener">@akshay.0to1</a>.</p></details>
       </div>
     </div>
@@ -652,7 +716,7 @@ nav .wrap{gap:12px}
       <h2>Stop editing.<br><span class="hl">Start posting.</span></h2>
       <p class="lede">One line in. A finished reel out.</p>
       <div class="buyrow" style="justify-content:flex-start">
-        <a class="btn dark" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$6</span></a>
+        <a class="btn dark" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener">Get the kit <span class="p">$10</span></a>
         <span class="fine" style="font-size:14px"><s>$24</s> · launch price</span>
       </div>
     </div>
@@ -668,10 +732,10 @@ nav .wrap{gap:12px}
   </div>
 </footer>
 
-<a class="badge" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener" aria-label="Get the kit for $6">
+<a class="badge" href="https://topmate.io/akshay_kheveria/2378648" target="_blank" rel="noopener" aria-label="Get the kit for $10">
   <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="c" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
   <text font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#FFFFFF" letter-spacing="2.2"><textPath href="#c">GET THE KIT · GET THE KIT · </textPath></text></svg>
-  <b>$6</b>
+  <b>$10</b>
 </a>
 
 <script>
@@ -680,11 +744,11 @@ nav .wrap{gap:12px}
 
   // ticker
   const t = document.getElementById('tick');
-  const item = '<span>Launch price <em>$6</em> ★ later <s>$24</s> ★ save $18 ★ pay once ★ no render credits ★ </span>';
+  const item = '<span>New: 3D skits ★ launch price <em>$10</em> ★ later <s>$24</s> ★ save $14 ★ pay once ★ no render credits ★ </span>';
   t.innerHTML = item.repeat(8);
 
   // typing prompt
-  const topics = ['/reel why most founders price too low','/reel everyone is selling reel guides, pixel style','/viral D2C brands','/host make me in pixel','use my ElevenLabs take, keep its speed','render this one in paper, no host'];
+  const topics = ['/skit me vs my AI, night desk','/reel why most founders price too low','/reel everyone is selling reel guides, pixel style','/viral D2C brands','/host make me in pixel','use my ElevenLabs take, keep its speed','render this one in paper, no host'];
   const el = document.getElementById('typed');
   if(!reduce){ let i=0,j=0,del=false;
     (function loop(){ const s=topics[i]; el.textContent=s.slice(0,j);
@@ -694,7 +758,7 @@ nav .wrap{gap:12px}
 
   // host poses + bubble
   const imgs=[...document.querySelectorAll('#host img')];
-  const lines=['Mere dost, every frame here is code.','It researches, scores hooks, then builds.','$6. Launch price. Go go go.'];
+  const lines=['Mere dost, every frame here is code.','Meet my 3D twin, bottom left.','$10. Launch price. Go go go.'];
   const b=document.getElementById('bubble'); let k=0;
   if(!reduce) setInterval(()=>{ k=(k+1)%imgs.length; imgs.forEach((im,n)=>im.classList.toggle('on',n===k)); b.textContent=lines[k]; b.animate([{transform:'rotate(-3deg) scale(.85)'},{transform:'rotate(-3deg) scale(1)'}],{duration:350,easing:'cubic-bezier(.2,1.5,.4,1)'}); },3200);
 
@@ -727,7 +791,8 @@ nav .wrap{gap:12px}
            riso:{d:'Printed and grainy. For creators and design.',c:['#E9EDF5','#FF5FA2','#7FA2FF','#FFD23F','#1B2A6B']},
            clean:{d:'White and minimal. For business and finance.',c:['#F4F5F8','#2F5BFF','#FFE08A','#C9F2DF','#14161C']},
            paper:{d:'Notebook style. For "how I built it" stories.',c:['#F4F1EB','#17171A','#E5402B','#FFE7A3','#DCE6F5']},
-           pixel:{d:'8-bit, with a pixel version of you.',c:['#DDE8F6','#1B1E3A','#FF6B1A','#FFD23F','#4CD07D']}};
+           pixel:{d:'8-bit, with a pixel version of you.',c:['#DDE8F6','#1B1E3A','#FF6B1A','#FFD23F','#4CD07D']},
+           skit:{d:'3D you and a sidekick, talking in one scene. For roasts and stories.',c:['#0E1230','#F0703A','#FFD9A0','#FF9A5C','#F2F1FF']}};
   const sv=document.getElementById('styleVid'), sd=document.getElementById('sdesc');
   function setStyle(k){ document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x.dataset.s===k));
     sd.innerHTML='<p>'+S[k].d+'</p><div class="sw">'+S[k].c.map(c=>'<i style="background:'+c+'"></i>').join('')+'</div>';
